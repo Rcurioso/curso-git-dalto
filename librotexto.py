@@ -31,3 +31,14 @@ for line in infofile2:
         cuenta = cuenta + 1
         print(f'Línea completa {cuenta} que empieza por guión: ', line)
 print(' ')
+
+# Una forma diferente de hacer lo mismo sería:
+infofile3 = open('archivotextoAnsi.txt')
+cuenta = 0
+for line in infofile3:
+    line = line.rstrip()
+    if not line.startswith('—'):
+        continue
+    cuenta = cuenta + 1
+    print(f'Línea completa {cuenta} que empieza por guión: ', line)
+print(' ')
