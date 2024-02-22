@@ -32,7 +32,7 @@ for line in infofile2:
         print(f'Línea completa {cuenta} que empieza por guión: ', line)
 print(' ')
 
-# Una forma diferente de hacer lo mismo sería:
+# Una forma diferente de hacer lo mismo utilizando 'continue' sería:
 infofile3 = open('archivotextoAnsi.txt')
 cuenta = 0
 for line in infofile3:
