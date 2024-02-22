@@ -1,12 +1,13 @@
+# Abrimos el archivo en un identificador (variable infofile) y le decimos que lo imprima todo.
 print(' ')
 infofile = open('archivotextoAnsi.txt')
 for lineas in infofile:
     lineas = lineas.rstrip()
     print(lineas)
 
+# Información que podemos sacar del identificador y del texto:
 print(" ")
 print("Información del archivo tras open(Ansi): ", infofile)
-
 xfile = open('archivotexto.txt')
 print("Información del archivo tras open(UTF-8): ", xfile)
 count = 0
@@ -14,13 +15,14 @@ for line in xfile:
     line = line
     count = count + 1
 print("Line count: ", count)
-
+# Contamos el número de caracteres e imprimimos un trozo (del 6 al 59).
 fhand = open('archivotextoAnsi.txt')
 texto = fhand.read()
 print('Número de caracteres: ', len(texto))
 print('Trozo de caracteres: ', texto[6:60])
 print(' ')
 
+# Buscamos un caracter inicial en el texto e imprimimos su línea.
 infofile2 = open('archivotextoAnsi.txt')
 cuenta = 0
 for line in infofile2:
