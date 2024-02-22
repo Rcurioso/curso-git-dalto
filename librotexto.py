@@ -42,3 +42,14 @@ for line in infofile3:
     cuenta = cuenta + 1
     print(f'Línea completa {cuenta} que empieza por guión: ', line)
 print(' ')
+
+# Otra forma de utilizar 'continue' sería con 'in':
+infofile3 = open('archivotextoAnsi.txt')
+cuenta = 0
+for line in infofile3:
+    line = line.rstrip()
+    if not '—' in line:
+        continue
+    cuenta = cuenta + 1
+    print(f'Línea completa {cuenta} que empieza por guión: ', line)
+print(' ')
